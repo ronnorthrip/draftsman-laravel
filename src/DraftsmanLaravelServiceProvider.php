@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace DraftsmanInc\DraftsmanLaravel;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use DraftsmanInc\DraftsmanLaravel\Commands\DraftsmanLaravelCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class DraftsmanLaravelServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('draftsman-laravel')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_migration_table_name_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_draftsman_laravel_table')
+            ->hasCommand(DraftsmanLaravelCommand::class);
     }
 }
