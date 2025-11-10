@@ -2,7 +2,7 @@
 
 namespace DraftsmanInc\DraftsmanLaravel;
 
-use DraftsmanInc\DraftsmanLaravel\Commands\DraftsmanLaravelCommand;
+use DraftsmanInc\DraftsmanLaravel\Commands\DraftsmanCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -19,7 +19,7 @@ class DraftsmanLaravelServiceProvider extends PackageServiceProvider
             ->name('draftsman-laravel')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_draftsman_laravel_table')
-            ->hasCommand(DraftsmanLaravelCommand::class);
+            ->hasRoute('web')
+            ->hasCommand(DraftsmanCommand::class);
     }
 }

@@ -4,9 +4,9 @@ namespace DraftsmanInc\DraftsmanLaravel\Commands;
 
 use Illuminate\Console\Command;
 
-class DraftsmanLaravelCommand extends Command
+class DraftsmanCommand extends Command
 {
-    public $signature = 'draftsman-laravel';
+    public $signature = 'draftsman';
 
     public $description = 'My command';
 
